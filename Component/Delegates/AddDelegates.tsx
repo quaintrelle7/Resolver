@@ -93,17 +93,6 @@ function AddDelegates() {
       <Container maxW={'5xl'} py={12}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
           <Stack spacing={4} marginRight="180" marginLeft="-40">
-            {/* <Text
-              textTransform={'uppercase'}
-              color={'blue.400'}
-              fontWeight={600}
-              fontSize={'sm'}
-              bg={useColorModeValue('blue.50', 'blue.900')}
-              p={2}
-              alignSelf={'flex-start'}
-              rounded={'md'}>
-             Secure your wallet now
-            </Text> */}
             <Text
               fontFamily={'heading'}
               fontWeight={700}
@@ -164,7 +153,7 @@ function AddDelegates() {
               divider={
                 <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
               }>
-             
+
             </Stack>
           </Stack>
           <Flex>
@@ -190,16 +179,18 @@ function AddDelegates() {
                 Wallet Resolver
               </Heading>
               <Text fontSize={'xl'} color={'gray.800'} >
-                The NewLife™ technology allows you to monitor your crops and get complete
-                insights at real time. The proprietary software/hardware ecosystem
-                prevents your plants from getting neglected.
+                Unlock the future of cryptocurrency security with our cutting-edge project.
+              </Text>
+              <Text fontSize={'xl'} color={'gray.800'}> We are on a mission to help crypto enthusiasts regain control of their hacked wallets and fortify their digital assets.</Text>
+              <Text fontSize={'xl'} color={'gray.800'}>
+                Get involved and be part of the solution!
               </Text>
             </Box>
           </Flex>
         </SimpleGrid>
       </Container>
 
-     
+
     </>
   );
 }
