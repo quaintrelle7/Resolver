@@ -92,7 +92,7 @@ function AddDelegates() {
     <>
       <Container maxW={'5xl'} py={12}>
         <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
-          <Stack spacing={4} marginRight="180" marginLeft="-40">
+          <Stack spacing={4} marginRight="180">
             <Text
               fontFamily={'heading'}
               fontWeight={700}
@@ -175,14 +175,15 @@ function AddDelegates() {
                 color={'gray.500'}>
                 Technology
               </Text>
-              <Heading color={'Black'} mb={"40px"}>
+              <Heading color={'Black'} mb={"40px"} mt={5}>
                 Wallet Resolver
               </Heading>
-              <Text fontSize={'xl'} color={'gray.800'} >
+              <Text fontSize={'xl'} color={'gray.800'} mb={5} mt={2} >
                 Unlock the future of cryptocurrency security with our cutting-edge project.
               </Text>
-              <Text fontSize={'xl'} color={'gray.800'}> We are on a mission to help crypto enthusiasts regain control of their hacked wallets and fortify their digital assets.</Text>
-              <Text fontSize={'xl'} color={'gray.800'}>
+
+              <Text fontSize={'xl'} color={'gray.800'} mb={5}> We are on a mission to help crypto enthusiasts regain control of their hacked wallets and fortify their digital assets.</Text>
+              <Text fontSize={'xl'} color={'gray.800'} mb={5}>
                 Get involved and be part of the solution!
               </Text>
             </Box>
