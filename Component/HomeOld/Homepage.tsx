@@ -12,6 +12,7 @@ import {
 } from '@chakra-ui/react'
 import AddDelegates from '../Delegates/AddDelegates'
 import { useState } from 'react';
+import UpdateAddress from '../Delegates/UpdateAddress';
 
 
 
@@ -70,10 +71,11 @@ export default function Homepage() {
                         _hover={{ bg: 'orange.500' }} onClick={onBtnClick}>
                         Get started
                     </Button>
-                    <Button rounded={'full'} px={6}>
+                    {/* <Button rounded={'full'} px={6}>
                         Learn more
-                    </Button>
-                    T</Stack>
+                    </Button> */}
+                    <UpdateAddress />
+                </Stack>
                 <Flex w={'full'}>
                     {/* <Illustration height={{ sm: '24rem', lg: '28rem' }} mt={{ base: 12, sm: 16 }} /> */}
                 </Flex>

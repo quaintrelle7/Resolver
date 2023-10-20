@@ -165,7 +165,7 @@ function AddDelegates() {
               }
               objectFit={'cover'}
             /> */}
-            <Box mb={{ base: 8, md: 20 }} mr={-40}>
+            <Box mb={{ base: 8, md: 20 }} mr={-10}>
               <Text
                 fontFamily={'heading'}
                 fontWeight={700}
