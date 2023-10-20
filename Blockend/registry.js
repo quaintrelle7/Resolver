@@ -1,17 +1,12 @@
-
 export const addressList = [
   {
     chainId: 80001,
-    address: "0x3AbBD5F11636360E2d8eBef883521E1DC39aA76a",
+    address: "0x5B609a7D58eEC8c2348284cFEAa15F1b3ad2668a",
   },
 ];
 
 export const abi = [
-  {
-    inputs: [],
-    name: "NotAuthorised",
-    type: "error",
-  },
+  { inputs: [], name: "NotAuthorised", type: "error" },
   {
     anonymous: false,
     inputs: [
@@ -55,7 +50,13 @@ export const abi = [
       {
         indexed: true,
         internalType: "address",
-        name: "currWallet",
+        name: "oldWallet",
+        type: "address",
+      },
+      {
+        indexed: true,
+        internalType: "address",
+        name: "newWallet",
         type: "address",
       },
       {
@@ -89,33 +90,13 @@ export const abi = [
   },
   {
     inputs: [
-      {
-        internalType: "address",
-        name: "currWallet",
-        type: "address",
-      },
+      { internalType: "address", name: "currWallet", type: "address" },
       {
         components: [
-          {
-            internalType: "address",
-            name: "firDel",
-            type: "address",
-          },
-          {
-            internalType: "address",
-            name: "secDel",
-            type: "address",
-          },
-          {
-            internalType: "address",
-            name: "thirDel",
-            type: "address",
-          },
-          {
-            internalType: "address",
-            name: "fourDel",
-            type: "address",
-          },
+          { internalType: "address", name: "firDel", type: "address" },
+          { internalType: "address", name: "secDel", type: "address" },
+          { internalType: "address", name: "thirDel", type: "address" },
+          { internalType: "address", name: "fourDel", type: "address" },
         ],
         internalType: "struct Registry.Registery",
         name: "delegates",
@@ -130,15 +111,15 @@ export const abi = [
   {
     inputs: [
       {
-        internalType: "address",
-        name: "forWallet",
-        type: "address",
+        components: [
+          { internalType: "address", name: "oldWallet", type: "address" },
+          { internalType: "address", name: "newWallet", type: "address" },
+        ],
+        internalType: "struct Registry.Pair",
+        name: "pair",
+        type: "tuple",
       },
-      {
-        internalType: "address",
-        name: "signer",
-        type: "address",
-      },
+      { internalType: "address", name: "signer", type: "address" },
     ],
     name: "deleGateVote",
     outputs: [],
@@ -147,92 +128,46 @@ export const abi = [
   },
   {
     inputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
+      { internalType: "address", name: "", type: "address" },
+      { internalType: "address", name: "", type: "address" },
     ],
     name: "delegateVoteCount",
     outputs: [
-      {
-        internalType: "bool",
-        name: "",
-        type: "bool",
-      },
+      { internalType: "address", name: "oldWallet", type: "address" },
+      { internalType: "address", name: "newWallet", type: "address" },
     ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
-    ],
+    inputs: [{ internalType: "address", name: "", type: "address" }],
     name: "register",
     outputs: [
-      {
-        internalType: "address",
-        name: "firDel",
-        type: "address",
-      },
-      {
-        internalType: "address",
-        name: "secDel",
-        type: "address",
-      },
-      {
-        internalType: "address",
-        name: "thirDel",
-        type: "address",
-      },
-      {
-        internalType: "address",
-        name: "fourDel",
-        type: "address",
-      },
+      { internalType: "address", name: "firDel", type: "address" },
+      { internalType: "address", name: "secDel", type: "address" },
+      { internalType: "address", name: "thirDel", type: "address" },
+      { internalType: "address", name: "fourDel", type: "address" },
     ],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [
-      {
-        internalType: "address",
-        name: "currWallet",
-        type: "address",
-      },
-    ],
+    inputs: [{ internalType: "address", name: "currWallet", type: "address" }],
     name: "resolver",
-    outputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
-    ],
+    outputs: [{ internalType: "address", name: "", type: "address" }],
     stateMutability: "view",
     type: "function",
   },
   {
     inputs: [
       {
-        internalType: "address",
-        name: "oldWallet",
-        type: "address",
-      },
-      {
-        internalType: "address",
-        name: "newWallet",
-        type: "address",
+        components: [
+          { internalType: "address", name: "oldWallet", type: "address" },
+          { internalType: "address", name: "newWallet", type: "address" },
+        ],
+        internalType: "struct Registry.Pair",
+        name: "pair",
+        type: "tuple",
       },
     ],
     name: "updateOldToNew",
@@ -243,38 +178,24 @@ export const abi = [
   {
     inputs: [
       {
-        internalType: "address",
-        name: "currWallet",
-        type: "address",
+        components: [
+          { internalType: "address", name: "oldWallet", type: "address" },
+          { internalType: "address", name: "newWallet", type: "address" },
+        ],
+        internalType: "struct Registry.Pair",
+        name: "pair",
+        type: "tuple",
       },
     ],
     name: "voteValidation",
-    outputs: [
-      {
-        internalType: "bool",
-        name: "",
-        type: "bool",
-      },
-    ],
+    outputs: [{ internalType: "bool", name: "", type: "bool" }],
     stateMutability: "view",
     type: "function",
   },
   {
-    inputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
-    ],
+    inputs: [{ internalType: "address", name: "", type: "address" }],
     name: "walletStatusOldToNew",
-    outputs: [
-      {
-        internalType: "address",
-        name: "",
-        type: "address",
-      },
-    ],
+    outputs: [{ internalType: "address", name: "", type: "address" }],
     stateMutability: "view",
     type: "function",
   },

@@ -3,6 +3,7 @@ import Head from 'next/head';
 import { useState } from 'react';
 import web3 from '../Blockend/web3';
 import Homepage from '../Component/HomeOld/Homepage';
+import Navbar from '../Component/Navbar/Navbar';
 
 export default function Home() {
 
@@ -17,7 +18,7 @@ export default function Home() {
         <link rel="icon" href="/eth.jpg" />
       </Head>
 
-
+      <Navbar />
       <Homepage />
 
 

@@ -38,6 +38,7 @@
   margin-top: 4px;
   margin-bottom: 15px;
   border-radius: 5px;
+  border:1px solid grey;
 }
 
 .form-adel {
@@ -46,12 +47,13 @@
 }
 
 .submit-btn {
-  background: #12eeac;
+  background: #38a169;
+  color:#FFF;
   width: 100px;
   height: 40px;
   border-radius: 10px;
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  font-weight: 700;
 }
 
 .submit-btn:hover {

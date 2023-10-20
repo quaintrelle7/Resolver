@@ -6,8 +6,8 @@ import { Button } from "./button";
 export const theme = extendTheme({
   colors: {
     brand: {
-      100: "#000",
-      200:"#000",
+      100: "#6f1ab6",
+      200: "#000",
     },
   },
 

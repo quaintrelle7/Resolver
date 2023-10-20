@@ -1,6 +1,19 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ResolverContract } from "../../Blockend/interact";
 import web3 from "../../Blockend/web3";
+import {
+  Container,
+  SimpleGrid,
+  Image,
+  Flex,
+  Heading,
+  Text,
+  Stack,
+  StackDivider,
+  Icon,
+  useColorModeValue,
+  Box,
+} from '@chakra-ui/react'
 
 function AddDelegates() {
   // const provider = new ethers.providers.JsonRpcProvider(
@@ -14,7 +27,7 @@ function AddDelegates() {
 
   const [newAddress, setNewAddress] = useState("");
 
-  const [account, setAccount] = useState("");
+  // const [account, setAccount] = useState("");
 
   // useEffect(() => {
   //   const getAccount = async () => {
@@ -77,81 +90,116 @@ function AddDelegates() {
   };
   return (
     <>
-      <div
-        style={{
-          display: "flex",
-          width: "100%",
-          justifyContent: "center",
-        }}
-      >
-        <div className="form-adel" style={{ marginRight: "60px" }}>
-          <h1 style={{fontSize:"20px"}}> Add Delegates</h1>
-          <form style={{ marginTop: "20px" }} onSubmit={handleForm}>
-            <label>First Delegate</label>
-            <input
-              className="input-adel"
-              placeholder="Enter the wallet address"
-              type="text"
-              name="FirstDel"
-              value={firstDel}
-              onChange={(e) => setFirstDel(e.target.value)}
-              required
-            />
-            <label>Second Delegate</label>
-            <input
-              className="input-adel"
-              placeholder="Enter the wallet address"
-              type="text"
-              name="SecondDel"
-              value={secondDel}
-              onChange={(e) => setSecondDel(e.target.value)}
-              required
-            />
-            <label>Third Delegate</label>
-            <input
-              className="input-adel"
-              placeholder="Enter the wallet address"
-              type="text"
-              name="ThirdDel"
-              value={thirdDel}
-              onChange={(e) => setThirdDel(e.target.value)}
-              required
-            />
-            <label>Fourth Delegate</label>
-            <input
-              className="input-adel"
-              placeholder="Enter the wallet address"
-              type="text"
-              name="FourthDel"
-              value={fourthDel}
-              onChange={(e) => setFourthDel(e.target.value)}
-              required
-            />
-            <button className="submit-btn" type="submit">
-              Submit
-            </button>
-          </form>
-        </div>
-        {/* <div style={{ marginBottom: "40px" }}></div> */}
-        {/* <div className="form-adel">
-          <h2> Add New Address </h2>
-          <form style={{ marginTop: "20px" }} onSubmit={() => { }}>
-            <label>New Wallet Address</label>
-            <input
-              className="input-adel"
-              placeholder="Enter New Wallet Address"
-              type="text"
-              name="newAddress"
-              value={newAddress}
-              onChange={(e) => setNewAddress(e.target.value)}
-              required
-            />
-            <button className="submit-btn" type="submit">
-              Submit
-            </button>
-          </form>
-        </div> */}
-      </div>
+      <Container maxW={'5xl'} py={12}>
+        <SimpleGrid columns={{ base: 1, md: 2 }} spacing={10}>
+          <Stack spacing={4} marginRight="180" marginLeft="-40">
+            {/* <Text
+              textTransform={'uppercase'}
+              color={'blue.400'}
+              fontWeight={600}
+              fontSize={'sm'}
+              bg={useColorModeValue('blue.50', 'blue.900')}
+              p={2}
+              alignSelf={'flex-start'}
+              rounded={'md'}>
+             Secure your wallet now
+            </Text> */}
+            <Text
+              fontFamily={'heading'}
+              fontWeight={700}
+              textTransform={'uppercase'}
+              mb={3}
+              fontSize={'xl'}
+              color={'gray.500'}>
+              Secure your wallet now
+            </Text>
+            <Heading>Add Delegates</Heading>
+            <form style={{ marginTop: "20px" }} onSubmit={handleForm}>
+              <label>First Delegate</label>
+              <input
+                className="input-adel"
+                placeholder="Enter the wallet address"
+                type="text"
+                name="FirstDel"
+                value={firstDel}
+                onChange={(e) => setFirstDel(e.target.value)}
+                required
+              />
+              <label>Second Delegate</label>
+              <input
+                className="input-adel"
+                placeholder="Enter the wallet address"
+                type="text"
+                name="SecondDel"
+                value={secondDel}
+                onChange={(e) => setSecondDel(e.target.value)}
+                required
+              />
+              <label>Third Delegate</label>
+              <input
+                className="input-adel"
+                placeholder="Enter the wallet address"
+                type="text"
+                name="ThirdDel"
+                value={thirdDel}
+                onChange={(e) => setThirdDel(e.target.value)}
+                required
+              />
+              <label>Fourth Delegate</label>
+              <input
+                className="input-adel"
+                placeholder="Enter the wallet address"
+                type="text"
+                name="FourthDel"
+                value={fourthDel}
+                onChange={(e) => setFourthDel(e.target.value)}
+                required
+              />
+              <button className="submit-btn" type="submit">
+                Submit
+              </button>
+            </form>
+            <Stack
+              spacing={4}
+              divider={
+                <StackDivider borderColor={useColorModeValue('gray.100', 'gray.700')} />
+              }>
+             
+            </Stack>
+          </Stack>
+          <Flex>
+            {/* <Image
+              rounded={'md'}
+              alt={'feature image'}
+              src={
+                'https://images.unsplash.com/photo-1554200876-56c2f25224fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=1350&q=80'
+              }
+              objectFit={'cover'}
+            /> */}
+            <Box mb={{ base: 8, md: 20 }} mr={-40}>
+              <Text
+                fontFamily={'heading'}
+                fontWeight={700}
+                textTransform={'uppercase'}
+                mb={3}
+                fontSize={'xl'}
+                color={'gray.500'}>
+                Technology
+              </Text>
+              <Heading color={'Black'} mb={"40px"}>
+                Wallet Resolver
+              </Heading>
+              <Text fontSize={'xl'} color={'gray.800'} >
+                The NewLife™ technology allows you to monitor your crops and get complete
+                insights at real time. The proprietary software/hardware ecosystem
+                prevents your plants from getting neglected.
+              </Text>
+            </Box>
+          </Flex>
+        </SimpleGrid>
+      </Container>
+
+     
     </>
   );
 }
