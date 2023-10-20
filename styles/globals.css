@@ -1,0 +1,64 @@
+.navbarLink:hover {
+  color: #ea047e;
+  text-shadow: rgba(2, 2, 16, 0.072);
+  font-weight: 800;
+}
+
+@keyframes build {
+  0% {
+    transform: translateZ(0);
+  }
+  100% {
+    transform: translate3d(-70%, 0, 0);
+  }
+}
+
+.buildSlide {
+  animation: build 60s linear infinite;
+}
+
+.shadow {
+  box-shadow: 0 2.8px 2.2px rgba(212, 14, 14, 0.034),
+    0 6.7px 5.3px rgba(33, 10, 204, 0.048),
+    0 12.5px 10px rgba(219, 39, 39, 0.06), 0 22.3px 17.9px rgba(0, 0, 0, 0.072),
+    0 41.8px 33.4px rgba(141, 98, 98, 0.086), 0 100px 80px rgba(18, 2, 29, 0.12);
+}
+
+.primary-btn {
+  color: #6f1ab6;
+  background: #8bb8b3;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+}
+
+.input-adel {
+  width: 100%;
+  padding: 2%;
+  margin-top: 4px;
+  margin-bottom: 15px;
+  border-radius: 5px;
+}
+
+.form-adel {
+  width: 400px;
+  padding: 2%;
+}
+
+.submit-btn {
+  background: #12eeac;
+  width: 100px;
+  height: 40px;
+  border-radius: 10px;
+  font-size: 15px;
+  font-weight: 500;
+}
+
+.submit-btn:hover {
+  cursor: pointer;
+}
+
+.flex {
+  display: flex;
+  justify-content: center;
+}
