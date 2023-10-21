@@ -5,7 +5,7 @@ import { ChakraProvider } from '@chakra-ui/react'
 import '@rainbow-me/rainbowkit/styles.css';
 import { getDefaultWallets, RainbowKitProvider } from '@rainbow-me/rainbowkit';
 import { configureChains, createConfig, WagmiConfig } from 'wagmi';
-import { arbitrum, goerli, mainnet, optimism, polygon, polygonMumbai } from 'wagmi/chains';
+import { arbitrum, goerli, mainnet, optimism, polygon, polygonMumbai, avalanche } from 'wagmi/chains';
 import { publicProvider } from 'wagmi/providers/public';
 
 // import Layout from '../components/Layout/Layout'
@@ -16,6 +16,7 @@ const { chains, publicClient, webSocketPublicClient } = configureChains(
     polygon,
     optimism,
     arbitrum,
+    avalanche,
     polygonMumbai,
 
     ...(process.env.NEXT_PUBLIC_ENABLE_TESTNETS === 'true' ? [polygonMumbai] : []),

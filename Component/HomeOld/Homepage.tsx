@@ -9,14 +9,22 @@ import {
     Button,
     Icon,
     IconProps,
+    Box, Link
 } from '@chakra-ui/react'
 import AddDelegates from '../Delegates/AddDelegates'
 import { useState } from 'react';
 import UpdateAddress from '../Delegates/UpdateAddress';
 
+import { ExternalLinkIcon } from '@chakra-ui/icons';
+
 
 
 export default function Homepage() {
+
+
+    const links = {
+        dashboard: 'https://transaction-dashoboard.vercel.app/',
+    };
 
     const [showForm, setShowForm] = useState<Boolean>(false);
     const scroll2El = elID => {
@@ -77,7 +85,16 @@ export default function Homepage() {
                     <UpdateAddress />
                 </Stack>
                 <Flex w={'full'}>
-                    {/* <Illustration height={{ sm: '24rem', lg: '28rem' }} mt={{ base: 12, sm: 16 }} /> */}
+                    <Box textAlign={'center'} w="full" p={6} mt={0}>
+                        <Text fontWeight="700">
+                            Please visit this{' '}
+                            <Link href={links.dashboard} isExternal alignItems={'center'}>
+                                transaction dashboard <ExternalLinkIcon />
+                            </Link>
+                            , and make secure transactions today!
+                        </Text>
+
+                    </Box>
                 </Flex>
 
             </Stack>
